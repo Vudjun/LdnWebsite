@@ -1,0 +1,70 @@
+html {
+    font-size: 14px;
+}
+
+body {
+    background-color: #303036 !important;
+    color: #FFFFFF;
+}
+
+.navbar {
+    background-color: #303036;
+}
+
+table {
+    color: #FFFFFF !important;
+}
+
+.public-games {
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.display-4, .font-weight-normal {
+    font-weight: 500 !important;
+}
+
+.container {
+    max-width: 1280px;
+}
+
+.intro-header {
+    max-width: 700px;
+}
+
+.card {
+    border: none !important;
+}
+
+.card-header {
+    background-color: #47474e !important;
+}
+
+.card-body {
+    background-color: #515159;
+}
+
+.row-space { height: 15px; }
+
+.main-stats .col-4 {
+    padding-right: 0;
+}
+
+.main-stats .row {
+    margin-right: -30px;
+}
+
+.titleid {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.online-dot {
+    color: #4bd6d1;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
