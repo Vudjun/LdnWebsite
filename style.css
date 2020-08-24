@@ -17,7 +17,7 @@ table {
 
 .public-games {
     height: 300px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .display-4, .font-weight-normal {
