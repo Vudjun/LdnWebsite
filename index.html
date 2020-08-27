@@ -2,17 +2,42 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta data-key="viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <meta data-key="format-detection" name="format-detection" content="telephone=no">
+        <meta data-key="description" name="description" content="Multiplayer statistics for Ryujinx local wireless game connection.">
+        <meta name="author" content="Ryujinx">
+        <meta name="copyright" content="Ryujinx">
+        <meta name="keywords" content="ryujinx, switch, nintendo switch, emulator, home">
+        <meta name="description" content="Multiplayer statistics for Ryujinx local wireless game connection.">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="en_US">
+        <meta property="og:site_name" content="Ryujinx - Local Wireless">
+        <meta property="og:title" content="Ryujinx - Local Wireless">
+        <meta property="og:description" content="Multiplayer statistics for Ryujinx local wireless game connection.">
+        <meta property="og:image" content="https://ryujinx.org/public/logo.png">
+        <meta property="og:url" content="https://ldn.ryujinx.org/">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@RyujinxEmu">
+        <meta name="twitter:title" content="Ryujinx - Local Wireless">
+        <meta name="twitter:image" content="https://ryujinx.org/public/logo.png">
+        <meta name="twitter:description" content="Multiplayer statistics for Ryujinx local wireless game connection.">
+        <link rel="icon" href="data:,">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="img/favicon.96x96.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="img/favicon.76x76.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="img/favicon.120x120.png">
+
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
-        <title>Ryujinx Ldn</title>
+        <title>Ryujinx - Local Wireless</title>
 
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162558184-4"></script>
         <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","UA-162558184-4")</script>
     </head>
     <body>
         <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 navbar shadow">
-            <h5 class="my-0 mr-md-auto font-weight-normal"><img class="mb-2" src="https://ryujinx.org/public/logo.png" alt="" width="30" height="30"> Ryujinx Ldn</h5>
+            <h5 class="my-0 mr-md-auto font-weight-normal"><img class="mb-2" src="https://ryujinx.org/public/logo.png" alt="" width="30" height="30"> Ryujinx Local Wireless</h5>
             <nav class="my-2 my-md-0 mr-md-3">
                 <u>State :</u> <i class="online-dot fas fa-circle"></i> Online 
             </nav>
@@ -23,8 +48,8 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-sm-5">
-                    <div class="card shadow">
+                <div class="col-sm-5 who-online">
+                    <div class="card shadow h-100">
                         <div class="card-header">
                             <h4 class="my-0 font-weight-normal"><i class="fas fa-users"></i> Who is online ?</h4>
                         </div>
@@ -33,7 +58,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-7">
+                <div class="col-sm-7 hosted-games">
                     <div class="card shadow">
                         <div class="card-header">
                             <h4 class="my-0 font-weight-normal"><i class="fas fa-network-wired"></i> Hosted Games</h4>
@@ -74,6 +99,7 @@
                             <li><a class="text-muted" href="https://ryujinx.org/download" target="_blank">Download</a></li>
                             <li><a class="text-muted" href="https://github.com/Ryujinx/Ryujinx-Games-List/issues" target="_blank">Compatibility</a></li>
                             <li><a class="text-muted" href="https://github.com/Ryujinx/Ryujinx/wiki/Ryujinx-Setup-&-Configuration-Guide" target="_blank">Setup & Configuration Guide</a></li>
+                            <li><a class="text-muted" href="https://github.com/Ryujinx/Ryujinx/wiki/Multiplayer-(LDN-Local-Wireless)-Guide" target="_blank">Local Wireless Guide</a></li>
                         </ul>
                     </div>
                     <div class="col-6 col-md">
