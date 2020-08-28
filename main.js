@@ -16,7 +16,7 @@ $(document).ready(function() {
 
     $.getJSON("/api/public_games", function(data) {
         $.each(data, function() {
-            $(".games-table").append('<tr><th><i class="fas fa-gamepad"></i> ' + this.game_name + '<br /><span class="titleid">(' + this.title_id + ')</span></th><td>' + this.player_count + '/' + this.max_player_count + ' <i class="fas fa-users"></i><br /><i class="fas fa-home"></i> ' + encode(this.players.join(', <i class="fas fa-user"></i> ')) + '</td><td><i class="fas fa-network-wired"></i> ' + this.mode + ' (' + this.status + ')</td></tr>');
+            $(".games-table").append('<tr><th><i class="fas fa-gamepad"></i> ' + this.game_name + '<br /><span class="titleid">(' + this.title_id + ')</span></th><td>' + this.player_count + '/' + this.max_player_count + ' <i class="fas fa-users"></i><br /><i class="fas fa-home"></i> ' + this.players.map(player => encode(player)).join(', <i class="fas fa-user"></i> ') + '</td><td><i class="fas fa-network-wired"></i> ' + this.mode + ' (' + this.status + ')</td></tr>');
         });
     });
 });
