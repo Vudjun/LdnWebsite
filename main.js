@@ -19,7 +19,7 @@ $(document).ready(function() {
             $(".public-games").append('<div class="card margin-bt shadow"><div class="card-header"><div class="row"><div class="col-sm-10"><i class="red-sw fas fa-gamepad"></i> ' + this.game_name + ' <span class="badge badge-dark">' + this.title_id + '</span></div>'
                                     + '<div class="col-sm-2 games-players-number"><i class="blue-sw fas fa-users"></i> ' + this.player_count + '/' + this.max_player_count + ' Players</div></div></div>'
                                     + '<div class="card-body"><blockquote class="blockquote mb-0"><i class="blue-sw fas fa-home"></i> ' + this.players.map(player => encode(player)).join(', <i class="fas fa-user"></i> ')
-                                    + '<footer class="blockquote-footer">' + (this.mode == "P2P") ? '<i class="blue-sw fas fa-people-arrows"></i> ' : '<i class="blue-sw fas fa-server"></i> ' + this.mode + ' (' + this.status + ')</footer></blockquote></div></div>');
+                                    + '<footer class="blockquote-footer">' + ((this.mode == "P2P") ? '<i class="blue-sw fas fa-people-arrows"></i> ' : '<i class="blue-sw fas fa-server"></i> ') + this.mode + ' (' + this.status + ')</footer></blockquote></div></div>');
         });
     });
 });
