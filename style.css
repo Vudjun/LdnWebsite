@@ -15,11 +15,6 @@ table {
     color: #FFFFFF !important;
 }
 
-.public-games {
-    height: 300px;
-    overflow-y: auto;
-}
-
 .display-4, .font-weight-normal {
     font-weight: 500 !important;
 }
@@ -44,28 +39,47 @@ table {
     background-color: #515159;
 }
 
-.row-space { height: 15px; }
-
-.main-stats .col-4 {
-    padding-right: 0;
-}
-
-.main-stats .row {
-    margin-right: -30px;
-}
-
-.titleid {
-    font-size: 12px;
-    font-weight: normal;
-}
-
 .online-dot {
-    color: #4bd6d1;
+    color: #02c5e5;
+}
+
+.margin-bt {
+    margin-bottom: 40px;
+}
+
+.blockquote {
+    font-size: 1rem !important;
+}
+
+.blockquote-footer {
+    color: #FFFFFF !important;
+    font-size: 1rem !important;
+}
+
+th {
+    font-weight: normal !important;
+}
+
+.red-sw {
+    color: #ff5f55;
+}
+
+.blue-sw {
+    color: #02c5e5;
+}
+
+.blockquote-footer::before {
+    color: #02c5e5;
+    content: "\221F\00A0" !important;
 }
 
 @media (min-width: 768px) {
     html {
         font-size: 16px;
+    }
+
+    .games-players-number {
+        text-align: right!important;
     }
 }
 
@@ -74,7 +88,11 @@ table {
         border-top: none !important;
     }
 
-    .who-online {
+    .margin-bt {
         margin-bottom: 20px;
+    }
+
+    .games-players-number {
+        text-align: left!important;
     }
 }

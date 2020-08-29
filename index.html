@@ -48,35 +48,56 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-sm-5 who-online">
-                    <div class="card shadow h-100">
+                <div class="col-sm-4 margin-bt">
+                    <div class="card shadow">
                         <div class="card-header">
-                            <h4 class="my-0 font-weight-normal"><i class="fas fa-users"></i> Who is online ?</h4>
+                            <h4 class="my-0 font-weight-normal"><i class="red-sw fas fa-users"></i> Who is online ?</h4>
                         </div>
                         <div class="card-body">
-                            <div class="container main-stats"></div>
+                            <table class="w-100">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th class="text-right">Public <i class="fas fa-user"></i></th>
+                                        <th class="text-right">Private <i class="fas fa-user-secret"></i></th>
+                                        <th class="text-right">Total <i class="fas fa-users"></i></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th><i class="fas fa-users"></i> Players</th>
+                                        <td class="players-public text-right"></td>
+                                        <td class="players-private text-right"></td>
+                                        <td class="players-total text-right"></td>
+                                    </tr>
+                                    <tr>
+                                        <th><i class="fas fa-gamepad"></i> Games</th>
+                                        <td class="games-public text-right"></td>
+                                        <td class="games-private text-right"></td>
+                                        <td class="games-total text-right"></td>
+                                    </tr>
+                                    <tr>
+                                        <th><i class="fas fa-people-arrows"></i> In Connection</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="in-progress-total text-right"></td>
+                                    </tr>
+                                    <tr>
+                                        <th><i class="fas fa-server"></i> On Proxy Server</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="proxy-server-total text-right"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-7 hosted-games">
-                    <div class="card shadow">
-                        <div class="card-header">
-                            <h4 class="my-0 font-weight-normal"><i class="fas fa-network-wired"></i> Hosted Games</h4>
-                        </div>
-                        <div class="card-body public-games">
-                            <table class="table">
-                                <thead>
-                                  <tr>
-                                    <th>Game</th>
-                                    <th>Players</th>
-                                    <th>State</th>
-                                  </tr>
-                                </thead>
-                                <tbody class="games-table">
-                                </tbody>
-                              </table>
-                        </div>
+                <div class="col-sm-8">
+                    <div class="card-header margin-bt">
+                        <h4 class="my-0 font-weight-normal"><i class="red-sw fas fa-network-wired"></i> Hosted Games</h4>
                     </div>
+                    <div class="public-games"></div>
                 </div>
             </div>
             <footer class="pt-4 my-md-5 pt-md-5 border-top">
