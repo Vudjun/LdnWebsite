@@ -16,9 +16,19 @@
     </a>
 </p>
 
-## Changelog
+## Configuration
 
-The complete list of changes is available [here](CHANGELOG.md)
+This app can be configured using the following environment variables:
+
+| Name           | Description                                                                               | Default value | Notes                                                                                                        |
+| :------------- | ----------------------------------------------------------------------------------------- | :-----------: | ------------------------------------------------------------------------------------------------------------ |
+| `NODE_ENV`     | This should be set to `production` or `development` depending on the current environment. |     `""`      |                                                                                                              |
+| `DATA_PATH`    | The path to the data directory of this server.                                            |   `"data"`    | This can either be a relative path or an absolute path. Currently this directory only contains the log file. |
+| `SOCKET_PATH`  | The path to the unix socket this server should be listening on.                           |     `""`      | If this is not empty `HOST` and `PORT` will be ignored.                                                      |
+| `HOST`         | The address this server should be listening on.                                           | `"127.0.0.1"` |                                                                                                              |
+| `PORT`         | The port this server should be using.                                                     |    `3000`     |                                                                                                              |
+| `REDIS_URL`    | The URL of the redis server.                                                              |     `""`      | Format: `redis[s]://[[username][:password]@][host][:port][/db-number]`                                       |
+| `REDIS_SOCKET` | The path to the unix socket of the redis server.                                          |     `""`      | If this is not empty `REDIS_URL` will be ignored.                                                            |
 
 ## Contribute
 
@@ -40,10 +50,10 @@ If you'd like to support the project financially, Ryujinx has an active Patreon 
 
 All developers working on the project do so in their free time, but the project has several expenses:
 
-* Hackable Nintendo Switch consoles to reverse-engineer the hardware
-* Additional computer hardware for testing purposes (e.g. GPUs to diagnose graphical bugs, etc.)
-* Licenses for various software development tools (e.g. Jetbrains, IDA)
-* Web hosting and infrastructure maintenance (e.g. LDN servers)
+- Hackable Nintendo Switch consoles to reverse-engineer the hardware
+- Additional computer hardware for testing purposes (e.g. GPUs to diagnose graphical bugs, etc.)
+- Licenses for various software development tools (e.g. Jetbrains, IDA)
+- Web hosting and infrastructure maintenance (e.g. LDN servers)
 
 All funds received through Patreon are considered a donation to support the project. Patrons receive early access to progress reports and exclusive access to developer interviews.
 
