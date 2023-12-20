@@ -3,8 +3,8 @@ with pkgs;
 with (import (fetchFromGitHub {
   owner = "TSRBerry";
   repo = "pnpm2nix";
-  rev = "v0.2";
-  sha256 = "1az22kj0q37xgwi47zjyimwvqn1a5spx60mf30aya7s63x0r8xzc";
+  rev = "8df6e2a8bd0174f4e9fa858d37c08ff3e91019bc";
+  sha256 = "YhWzfuqNCZmKMbcoDoAT52KodjpuNj/7MklwKD0ojrg=";
 }) { inherit pkgs; });
 
 
