@@ -3,7 +3,7 @@ import { redisClient } from "./app";
 
 const router = Router();
 
-router.get("/", async (req, res, next) => {
+router.get("/", async (_req, res, _next) => {
   if (!redisClient.isOpen) {
     await redisClient.connect();
   }
@@ -17,7 +17,7 @@ router.get("/", async (req, res, next) => {
   return res.send(result);
 });
 
-router.get("/public_games", async (req, res, next) => {
+router.get("/public_games", async (req, res, _next) => {
   let gameFilter = "";
 
   if (req.query.titleid != null && (req.query.titleid as string)?.length > 0) {

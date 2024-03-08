@@ -2,7 +2,11 @@ import { Request, Response, NextFunction } from "express";
 import { logger } from "./app";
 import { loggerDefaultMetadata } from "./utils";
 
-export function requestLogger(req: Request, res: Response, next: NextFunction) {
+export function requestLogger(
+  req: Request,
+  _res: Response,
+  next: NextFunction
+) {
   logger.debug("Incoming request.", loggerDefaultMetadata(req));
   next();
 }
@@ -10,7 +14,7 @@ export function requestLogger(req: Request, res: Response, next: NextFunction) {
 export function errorLogger(
   err: Error,
   req: Request,
-  res: Response,
+  _res: Response,
   next: NextFunction
 ) {
   logger.error(err.message, {
