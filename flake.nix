@@ -14,8 +14,6 @@
 
             src = ./.;
 
-            npmBuildScript = "release";
-            npmBuildFlags = [ "--" "--outDir" "dist" ];
             installPhase = ''
               runHook preInstall
               cp -r dist $out/
@@ -26,7 +24,7 @@
               runHook postInstall
             '';
 
-            npmDepsHash = "sha256-Wo4dGsUAZwXbkuWwTKNA5kv4ZUnekdKm/TagP4Q4Ds8=";
+            npmDepsHash = "sha256-fqvUE5/M2VyIL5CyDEuUGye27e9fJJImMYL1wwZNFPg=";
           };
       };
     in flake-utils.lib.eachDefaultSystem (system:
@@ -45,4 +43,3 @@
         formatter = pkgs.nixfmt;
       });
 }
-
