@@ -22,4 +22,6 @@ COPY --from=build --chown=node:node /home/node/app/node_modules /home/node/app/n
 
 RUN mkdir /home/node/app/data
 
+USER nobody
+
 ENTRYPOINT [ "node", "." ]

@@ -76,7 +76,8 @@ app.use(actuator());
 app.use(requestLogger);
 
 // Set up routes
-app.use(express.static("public"));
+// Ensure caching is enabled 1 day
+app.use(express.static("public", { maxAge: 86400000 }));
 app.use("/api", apiRouter);
 
 // Error-handling

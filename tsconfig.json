@@ -3,6 +3,7 @@
   "include": ["src/**/*"],
   "exclude": ["**/*.spec.ts"],
   "compilerOptions": {
-    "outDir": "dist"
+    "outDir": "dist",
+    "resolveJsonModule": true
   }
 }

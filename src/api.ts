@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { redisClient } from "./app";
+import gamelist from "./gamelist.json";
 
 const router = Router();
 
@@ -34,7 +35,19 @@ router.get("/public_games", async (req, res, _next) => {
     return res.sendStatus(404);
   }
 
-  const games = Object.entries(results).map(([_, game]) => game);
+  const games = Object.entries(results).map(([_, game]) => {
+    const modifiedGame = { ...game };
+    
+    const gameListEntry = gamelist.find(
+      g => g.id.toLowerCase() === `0x${game.title_id.toLowerCase()}`
+    );
+
+    if (gameListEntry) {
+      modifiedGame.game_name = gameListEntry.name;
+    }
+
+    return modifiedGame;
+  });
 
   if (gameFilter.length > 0) {
     return res.send(games.filter((game) => game.title_id === gameFilter));
