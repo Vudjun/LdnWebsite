@@ -35,19 +35,24 @@ router.get("/public_games", async (req, res, _next) => {
     return res.sendStatus(404);
   }
 
-  const games = Object.entries(results).map(([_, game]) => {
-    const modifiedGame = { ...game };
-    
-    const gameListEntry = gamelist.find(
-      g => g.id.toLowerCase() === `0x${game.title_id.toLowerCase()}`
-    );
+  const games = Object.entries(results)
+    .map(([_, game]) => {
+      const modifiedGame = { ...game };
+      
+      const gameListEntry = gamelist.find(
+        g => g.id.toLowerCase() === `0x${game.title_id.toLowerCase()}`
+      );
 
-    if (gameListEntry) {
-      modifiedGame.game_name = gameListEntry.name;
-    }
+      if (gameListEntry) {
+        modifiedGame.game_name = gameListEntry.name;
+      }
 
-    return modifiedGame;
-  });
+      return modifiedGame;
+    })
+    .filter(game => {
+      // Hide ghost lobbies (assume anything older than 16 hours)
+      return game.created_at > Date.now() - 57600000;
+    });
 
   if (gameFilter.length > 0) {
     return res.send(games.filter((game) => game.title_id === gameFilter));
